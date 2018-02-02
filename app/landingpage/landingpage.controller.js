@@ -99,30 +99,30 @@
       vm.backToTop = false;
       let newspaper = value
 
-      if (value == 'denverpost.com') {
-        vm.newspaperHeader = 'https://denverphilharmonic.org/wp-content/uploads/2013/11/denver-post-logo-720x220.png'
+      if (value == 'cnn.com') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png'
       } else if (value == 'huffingtonpost.com') {
         vm.newspaperHeader = 'http://www.brandchannel.com/wp-content/uploads/2017/05/huffpost-new-logo-2017.jpg'
-      } else if (value == 'philly.com') {
-        vm.newspaperHeader = 'http://cdn.phillymag.com/wp-content/uploads/2015/07/inquirer-daily-news-philly-com-940x540.jpg'
+      } else if (value == 'msnbc.com') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/2000px-MSNBC_2008_logo.svg.png'
       } else if (value == 'independent.co.uk') {
         vm.newspaperHeader = 'https://static.independent.co.uk/static-assets/brand-logo.png'
-      } else if (value == 'nytimes.com') {
-        vm.newspaperHeader = 'https://25h9ni10fbba1euik72l6age-wpengine.netdna-ssl.com/wp-content/uploads/2010/08/new_york_times_logo_large-1600x600.jpg'
+      } else if (value == 'ap.org') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Associated_Press_logo.svg/2000px-Associated_Press_logo.svg.png'
       } else if (value == 'wsj.com') {
         vm.newspaperHeader = 'https://unicefstories.files.wordpress.com/2012/11/wsj_logo3.jpeg'
-      } else if (value == 'chicagotribune.com') {
-        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Chicago_Tribune_logo.svg/2000px-Chicago_Tribune_logo.svg.png'
-      } else if (value == 'latimes.com') {
-        vm.newspaperHeader = 'https://www.filepicker.io/api/file/TRbw19AlSk6Zz6cP8rBN'
-      } else if (value == 'bostonglobe.com') {
-        vm.newspaperHeader = 'https://ameliasaltsman.com/wp-content/uploads/2017/09/boston-globe-logo.jpg'
+      } else if (value == 'npr.org') {
+        vm.newspaperHeader = 'https://www.npr.org/about/images/press/Logos/NPRLogo_RGB.png'
+      } else if (value == 'reuters.com') {
+        vm.newspaperHeader = 'https://fiu-assets-2-syitaetz61hl2sa.stackpathdns.com/static/use-media-items/51/50840/full-2272x1704/58f5bc90/Reuters-logo.png?resolution=0'
+      } else if (value == 'economist.com') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png'
       } else if (value == 'usatoday.com') {
         vm.newspaperHeader = 'http://1000logos.net/wp-content/uploads/2017/07/Color-USA-Today-Logo.jpg'
-      } else if (value == 'baltimoresun.com') {
-        vm.newspaperHeader = 'https://gbc.org/wp-content/uploads/2014/10/Baltimore-Sun-logo.jpg'
-      } else if (value == 'miamiherald.com') {
-        vm.newspaperHeader = 'http://www.twodaysnewstand.com/uploads/4/5/6/7/45679297/the-miami-herald-logo-2.png?723'
+      } else if (value == 'newsweek.com') {
+        vm.newspaperHeader = 'https://i1.wp.com/www.divorcelawyersformen.com/wp-content/uploads/2017/03/newsweek.png?ssl=1'
+      } else if (value == 'nbcnews.com') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/NBC_News_2011.svg/1200px-NBC_News_2011.svg.png'
       }
 
       vm.newspaperClicked = true;
