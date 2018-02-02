@@ -1,0 +1,128 @@
+<div class="landingPage">
+  <div class="landingPageHeaderBox">
+    <div class="buttonBox">
+
+      <div ng-class="{'is-visible':visible}" ng-hide="$ctrl.hideSideMenu" class="menuMobileCategory">
+        <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
+        <ul class="menuLinkMenu">
+          <h2 class="sideMenuHeader">Categories</h2>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('sports'); visible=!visible;">Sports</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('entertainment'); visible=!visible;">Entertainment</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('technology'); visible=!visible;">Technology</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('general'); visible=!visible;">General</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('science'); visible=!visible;">Science</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('business'); visible=!visible;">Business</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('health'); visible=!visible;">Health</li>
+        </ul>
+      </div>
+    </div>
+    <div class="headerBox">
+      <h1 class="chaseHeader">Chase</h1>
+      <img class="chasenewsLogo" src="images/ChaseNewsLogo.png" />
+      <h1 class="newsHeader">News</h1>
+    </div>
+    <div class="buttonBox">
+      <p class="switchTo">
+        Switch to:
+      </p>
+      <button ng-show="$ctrl.newspaperButton" ng-click="$ctrl.showNewspapers()" class="btn landingPageHeaderButtonN">Newspapers</button>
+      <button ng-show="$ctrl.categoriesButton" ng-click="$ctrl.showCategories()" class="btn landingPageHeaderButtonC">Categories</button>
+    </div>
+  </div>
+  <button ng-hide="$ctrl.hideCategoryMenuButton" class="sideMenuCategory" ng-click="visible=!visible;">Choose a category</button>
+
+  <h2 class="menuHeaderCategories" ng-show="$ctrl.categoryMenu">Categories</h2>
+  <div class="menuBoxCategories" ng-show="$ctrl.categoryMenu">
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('sports')">
+      Sports
+    </div>
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('entertainment')">
+      Entertainment
+    </div>
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('technology')">
+      Technology
+    </div>
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('general')">
+      General
+    </div>
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('science')">
+      Science
+    </div>
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('business')">
+      Business
+    </div>
+    <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('health')">
+      Health
+    </div>
+  </div>
+
+  <h2 class="menuHeader" ng-show="$ctrl.newspaperMenu">Newspapers</h2>
+  <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('denverpost.com')">
+      Denver Post
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('huffingtonpost.com')">
+      HuffPost
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('philly.com')">
+      The Inquirer
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('washingtonpost.com')">
+      Washington Post
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('nytimes.com')">
+      NY Times
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('wsj.com')">
+      WSJ
+    </div>
+  </div>
+  <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('latimes.com')">
+      LA Times
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('bostonglobe.com')">
+      Boston Globe
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('chicagotribune.com')">
+      Chicago Tribune
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('usatoday.com')">
+      USA Today
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('baltimoresun.com')">
+      Baltimore Sun
+    </div>
+    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('miamiherald.com')">
+      Miami Herald
+    </div>
+  </div>
+
+
+  <img ng-show="$ctrl.beforeSearch" src="https://fthmb.tqn.com/9dOveBgb3oXyRMzCuSLrMWwwclk=/2121x1414/filters:fill(auto,1)/StackofNewspapers-59015e815f9b5810dc97efd7.jpg" class="mainLogo" />
+  <img ng-show="$ctrl.newspaperClicked" class="newspaperHeader" src="{{$ctrl.newspaperHeader}}" />
+  <h1 class="searchHeader">{{$ctrl.searchHeader}}</h1>
+
+  <h3 ng-show="$ctrl.loading">LOADING...</h3>
+  <div ng-repeat="article in $ctrl.news" class="articles">
+    <a href="{{article.url}}" target="_blank" class="article-link">
+      <div class="article-box">
+        <img class="article-image" src="{{article.urlToImage}}" />
+        <p class="article-title">
+          {{article.title}}
+        </p>
+        <p class="article-description">
+          {{article.description}}
+        </p>
+        <div class="article-details">
+          <p class="article-details-p">
+            {{article.source.name}}
+          </p>
+          <p class="article-details-p">
+            {{$ctrl.standardDate}}
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
