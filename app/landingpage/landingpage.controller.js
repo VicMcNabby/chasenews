@@ -105,8 +105,8 @@
         vm.newspaperHeader = 'http://www.brandchannel.com/wp-content/uploads/2017/05/huffpost-new-logo-2017.jpg'
       } else if (value == 'philly.com') {
         vm.newspaperHeader = 'http://cdn.phillymag.com/wp-content/uploads/2015/07/inquirer-daily-news-philly-com-940x540.jpg'
-      } else if (value == 'washingtonpost.com') {
-        vm.newspaperHeader = 'http://www.delsol.com/blog/wp-content/uploads/2017/09/washington-post-logo.jpg'
+      } else if (value == 'independent.co.uk') {
+        vm.newspaperHeader = 'https://static.independent.co.uk/static-assets/brand-logo.png'
       } else if (value == 'nytimes.com') {
         vm.newspaperHeader = 'https://25h9ni10fbba1euik72l6age-wpengine.netdna-ssl.com/wp-content/uploads/2010/08/new_york_times_logo_large-1600x600.jpg'
       } else if (value == 'wsj.com') {

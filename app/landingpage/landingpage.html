@@ -60,23 +60,23 @@
   <h2 class="menuHeader" ng-show="$ctrl.newspaperMenu">Newspapers</h2>
   <div class="stickyDiv">
     <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
-      <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('denverpost.com')">
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('denverpost.com')">
         Denver Post
       </div>
       <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('huffingtonpost.com')">
         HuffPost
       </div>
-      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('philly.com')">
-        The Inquirer
-      </div>
-      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('washingtonpost.com')">
-        Washington Post
+      <div class="menu2 menuButton-newspapersX" ng-click="$ctrl.getNewspaper('independent.co.uk')">
+        The Independent
       </div>
       <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('nytimes.com')">
         NY Times
       </div>
       <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('wsj.com')">
         WSJ
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('philly.com')">
+        The Inquirer
       </div>
     </div>
     <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
@@ -122,7 +122,7 @@
             {{article.source.name}}
           </p>
           <p class="article-details-p">
-            {{$ctrl.standardDate}}
+            {{article.publishedAt.slice(5,10).replace('-', '/')}}
           </p>
         </div>
       </div>

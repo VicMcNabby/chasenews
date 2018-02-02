@@ -161,7 +161,7 @@ body {
   box-shadow: 0 10px 6px -6px #333;
 }
 
-.menuButton-newspapers {
+.menuButton-newspapers, .menuButton-newspapersX {
   border: 1px solid #fff;
   background-color: #5e1a00;
   display: flex;
@@ -172,7 +172,7 @@ body {
   overflow: hidden;
 }
 
-.menuButton-newspapers:hover {
+.menuButton-newspapers:hover, .menuButton-newspapersX:hover {
   background: #b74316;
   cursor: pointer;
 }
@@ -256,7 +256,7 @@ body {
 
 .article-description {
   margin-top: 7px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #000;
   width: 285px;
   font-size: 13px;
@@ -264,6 +264,7 @@ body {
   overflow: hidden;
   margin-bottom: 5px;
   padding-left: 5px;
+  min-height: 150px;
 }
 
 .article-details {
@@ -382,7 +383,7 @@ body {
   .menuBoxCategories {
     font-size: 16px;
   }
-  .menuButton-newspapers {
+  .menuButton-newspapers, .menuButton-newspapersX {
     height: 45px;
   }
 }
@@ -453,11 +454,8 @@ body {
   .buttonBox {
     width: 100%;
   }
-  .menuButton-newspapers {
+  .menuButton-newspapers, .menuButton-newspapersX {
     font-size: 11px;
-  }
-  .menuButton-newspapers:nth-child(4) {
-    font-size: 9px;
   }
   .menuMobileCategory.is-visible {
     width: 60vw;
@@ -479,5 +477,11 @@ body {
   }
   .article-title {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .menuButton-newspapersX {
+    font-size: 8px;
   }
 }
