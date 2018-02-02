@@ -222,7 +222,7 @@ body {
   display: inline-block;
   margin: 5px;
   width: 290px;
-  height: 430px;
+  height: 440px;
   background: #dee2e2;
   box-shadow: 1px 1px 1px #333;
   position: relative;
@@ -285,6 +285,7 @@ body {
   height: 175px;
   box-shadow: 1px 1px 2px #333;
   margin: 7px 7px 5px 5px;
+  object-fit: cover;
 }
 
 .sideMenuCategory {
@@ -316,7 +317,7 @@ body {
   -o-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
   overflow: hidden;
-  z-index: 6;
+  z-index: 100;
 }
 
 .menuMobileCategory.is-visible {
@@ -326,7 +327,7 @@ body {
   -moz-transition: width 0.5s ease-in-out;
   -o-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
-  z-index: 6;
+  z-index: 100;
 }
 
 .menuLinkMenu {
@@ -366,6 +367,17 @@ body {
   margin-bottom: 15px;
 }
 
+.backToTop {
+  font-family: 'norwester', sans-serif;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 2px 10px;
+  width: 150px;
+  margin: 7px auto;
+  cursor: pointer;
+  background: #fcf1ed;
+}
+
 @media only screen and (max-width: 950px) {
   .menuBoxCategories {
     font-size: 16px;
@@ -390,6 +402,9 @@ body {
   }
   .sideMenuCategory {
     display: block;
+    position: sticky;
+    top: 5px;
+    z-index: 11;
   }
   .menuMobileCategory.is-visible {
     width: 40vw;
@@ -397,13 +412,18 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .stickyDiv {
+    position: sticky;
+    top: 1px;
+    z-index: 11;
+  }
   .headerBox {
     margin-bottom: 4%;
   }
   .articles {
     margin: 10px 3px;
     width: 300px;
-    height: 430px;
+    height: 450px;
     background: #dee2e2;
     box-shadow: 1px 1px 1px #333;
     position: relative;

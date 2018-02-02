@@ -12,6 +12,7 @@
     vm.categoryMenu = true;
     vm.newspaperButton = true;
     vm.newspaperClicked = false;
+    vm.backToTop = false;
 
     $(`.menu`).on('click', function() {
       $(`.menu`).removeClass('active');
@@ -28,6 +29,7 @@
 
       vm.beforeSearch = false;
       vm.loading = true;
+      vm.backToTop = false;
       let category = value
       vm.searchHeader = ''
 
@@ -51,7 +53,8 @@
             vm.searchHeader = 'Health'
           }
 
-          vm.loading = false
+          vm.loading = false;
+          vm.backToTop = true;
           vm.news = results.data.articles
           let news = vm.news
           let theDate = results.data.articles.description
@@ -93,6 +96,7 @@
 
       vm.beforeSearch = false;
       vm.loading = true
+      vm.backToTop = false;
       let newspaper = value
 
       if (value == 'denverpost.com') {
@@ -127,6 +131,7 @@
         .then(results => {
           console.log(results);
           vm.loading = false
+          vm.backToTop = true;
           vm.news = results.data.articles
           let news = vm.news
           let theDate = results.data.articles.description
@@ -174,6 +179,7 @@
       vm.newspaperHeader = '';
       vm.beforeSearch = true;
       vm.hideCategoryMenuButton = true;
+      vm.backToTop = false;
     }
 
     vm.showCategories = function() {
@@ -187,6 +193,7 @@
       vm.newspaperClicked = false;
       vm.beforeSearch = true;
       vm.hideCategoryMenuButton = false;
+      vm.backToTop = false;
     }
 
   }

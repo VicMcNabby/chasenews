@@ -18,7 +18,7 @@
     </div>
     <div class="headerBox">
       <h1 class="chaseHeader">Chase</h1>
-      <img class="chasenewsLogo" src="images/ChaseNewsLogo.png" />
+      <img id="top" class="chasenewsLogo" src="images/ChaseNewsLogo.png" />
       <h1 class="newsHeader">News</h1>
     </div>
     <div class="buttonBox">
@@ -32,6 +32,7 @@
   <button ng-hide="$ctrl.hideCategoryMenuButton" class="sideMenuCategory" ng-click="visible=!visible;">Choose a category</button>
 
   <h2 class="menuHeaderCategories" ng-show="$ctrl.categoryMenu">Categories</h2>
+
   <div class="menuBoxCategories" ng-show="$ctrl.categoryMenu">
     <div class="menu menuButton-categories" ng-click="$ctrl.getCategory('sports')">
       Sports
@@ -57,44 +58,46 @@
   </div>
 
   <h2 class="menuHeader" ng-show="$ctrl.newspaperMenu">Newspapers</h2>
-  <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
-    <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('denverpost.com')">
-      Denver Post
+  <div class="stickyDiv">
+    <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
+      <div class="menu menuButton-newspapers" ng-click="$ctrl.getNewspaper('denverpost.com')">
+        Denver Post
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('huffingtonpost.com')">
+        HuffPost
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('philly.com')">
+        The Inquirer
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('washingtonpost.com')">
+        Washington Post
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('nytimes.com')">
+        NY Times
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('wsj.com')">
+        WSJ
+      </div>
     </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('huffingtonpost.com')">
-      HuffPost
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('philly.com')">
-      The Inquirer
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('washingtonpost.com')">
-      Washington Post
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('nytimes.com')">
-      NY Times
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('wsj.com')">
-      WSJ
-    </div>
-  </div>
-  <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('latimes.com')">
-      LA Times
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('bostonglobe.com')">
-      Boston Globe
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('chicagotribune.com')">
-      Chicago Tribune
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('usatoday.com')">
-      USA Today
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('baltimoresun.com')">
-      Baltimore Sun
-    </div>
-    <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('miamiherald.com')">
-      Miami Herald
+    <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('latimes.com')">
+        LA Times
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('bostonglobe.com')">
+        Boston Globe
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('chicagotribune.com')">
+        Chicago Tribune
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('usatoday.com')">
+        USA Today
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('baltimoresun.com')">
+        Baltimore Sun
+      </div>
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('miamiherald.com')">
+        Miami Herald
+      </div>
     </div>
   </div>
 
@@ -125,4 +128,7 @@
       </div>
     </a>
   </div>
+  <p ng-show="$ctrl.backToTop" class="backToTop" href="#top" du-smooth-scroll>
+    Back To Top
+  </p>
 </div>
