@@ -18,6 +18,11 @@
       $(this).addClass('active');
     });
 
+    $(`.menu2`).on('click', function() {
+      $(`.menu2`).removeClass('active2');
+      $(this).addClass('active2');
+    });
+
 
     vm.getCategory = function(value) {
 
