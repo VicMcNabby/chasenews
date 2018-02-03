@@ -6,13 +6,13 @@
         <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
         <ul class="menuLinkMenu">
           <h2 class="sideMenuHeader">Categories</h2>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('sports'); visible=!visible;">Sports</li>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('entertainment'); visible=!visible;">Entertainment</li>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('technology'); visible=!visible;">Technology</li>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('general'); visible=!visible;">General</li>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('science'); visible=!visible;">Science</li>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('business'); visible=!visible;">Business</li>
-          <li class="categoryLink" ng-click="$ctrl.getCategory('health'); visible=!visible;">Health</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('sports'); visible=!visible;" href="#top" du-smooth-scroll>Sports</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('entertainment'); visible=!visible;" href="#top" du-smooth-scroll>Entertainment</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('technology'); visible=!visible;" href="#top" du-smooth-scroll>Technology</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('general'); visible=!visible;" href="#top" du-smooth-scroll>General</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('science'); visible=!visible;" href="#top" du-smooth-scroll>Science</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('business'); visible=!visible;" href="#top" du-smooth-scroll>Business</li>
+          <li class="categoryLink" ng-click="$ctrl.getCategory('health'); visible=!visible;" href="#top" du-smooth-scroll>Health</li>
         </ul>
       </div>
     </div>
@@ -25,11 +25,11 @@
       <p class="switchTo">
         Switch to:
       </p>
-      <button ng-show="$ctrl.newspaperButton" ng-click="$ctrl.showNewspapers()" class="btn landingPageHeaderButtonN">News Outlets</button>
-      <button ng-show="$ctrl.categoriesButton" ng-click="$ctrl.showCategories()" class="btn landingPageHeaderButtonC">Categories</button>
+      <button ng-show="$ctrl.newspaperButton" ng-click="$ctrl.showNewspapers()" id="btn" class="btn landingPageHeaderButtonN">News Outlets</button>
+      <button ng-show="$ctrl.categoriesButton" ng-click="$ctrl.showCategories()" id="btn" class="btn landingPageHeaderButtonC">Categories</button>
     </div>
   </div>
-  <button ng-hide="$ctrl.hideCategoryMenuButton" class="sideMenuCategory" ng-click="visible=!visible;">Choose a category</button>
+  <button ng-hide="$ctrl.hideCategoryMenuButton" class="btn sideMenuCategory" ng-click="visible=!visible;">Choose a category</button>
 
   <h2 class="menuHeaderCategories" ng-show="$ctrl.categoryMenu">Categories</h2>
 
@@ -72,19 +72,13 @@
       <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('msnbc.com')" href="#top" du-smooth-scroll>
         MSNBC
       </div>
-      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('wsj.com')" href="#top" du-smooth-scroll>
-        WSJ
-      </div>
-      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('ap.org')" href="#top" du-smooth-scroll>
-        AP
+      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('cbsnews.com')" href="#top" du-smooth-scroll>
+        CBS News
       </div>
     </div>
     <div class="menuBoxNewspapers" ng-show="$ctrl.newspaperMenu">
       <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('npr.org')" href="#top" du-smooth-scroll>
         NPR
-      </div>
-      <div class="menu2 menuButton-newspapers" ng-click="$ctrl.getNewspaper('reuters.com')" href="#top" du-smooth-scroll>
-        Reuters
       </div>
       <div class="menu2 menuButton-newspapersX" ng-click="$ctrl.getNewspaper('economist.com')" href="#top" du-smooth-scroll>
         The Economist

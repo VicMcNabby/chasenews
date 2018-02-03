@@ -19,6 +19,11 @@
       $(this).addClass('active');
     });
 
+    $(`#btn`).on('click', function() {
+      $(`.menu`).removeClass('active');
+      $(`.menu2`).removeClass('active2');
+    });
+
     $(`.menu2`).on('click', function() {
       $(`.menu2`).removeClass('active2');
       $(this).addClass('active2');
@@ -107,14 +112,10 @@
         vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/2000px-MSNBC_2008_logo.svg.png'
       } else if (value == 'independent.co.uk') {
         vm.newspaperHeader = 'https://static.independent.co.uk/static-assets/brand-logo.png'
-      } else if (value == 'ap.org') {
-        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Associated_Press_logo.svg/2000px-Associated_Press_logo.svg.png'
-      } else if (value == 'wsj.com') {
-        vm.newspaperHeader = 'https://unicefstories.files.wordpress.com/2012/11/wsj_logo3.jpeg'
+      } else if (value == 'cbsnews.com') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/CBS_News.svg/1280px-CBS_News.svg.png'
       } else if (value == 'npr.org') {
         vm.newspaperHeader = 'https://www.npr.org/about/images/press/Logos/NPRLogo_RGB.png'
-      } else if (value == 'reuters.com') {
-        vm.newspaperHeader = 'https://fiu-assets-2-syitaetz61hl2sa.stackpathdns.com/static/use-media-items/51/50840/full-2272x1704/58f5bc90/Reuters-logo.png?resolution=0'
       } else if (value == 'economist.com') {
         vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/TheEconomistLogo.svg/2000px-TheEconomistLogo.svg.png'
       } else if (value == 'usatoday.com') {

@@ -167,9 +167,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16.4%;
+  width: 19.6%;
   padding: 5px 0px;
   overflow: hidden;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .menuButton-newspapers:hover, .menuButton-newspapersX:hover {
@@ -301,6 +302,10 @@ body {
   font-size: 20px;
 }
 
+.sideMenuCategory:enabled {
+  color: #fff;
+}
+
 .menuMobileCategory {
   width: 0px;
   height: 100vh;
@@ -329,6 +334,7 @@ body {
   -o-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
   z-index: 100;
+  overflow: scroll;
 }
 
 .menuLinkMenu {
@@ -409,6 +415,7 @@ body {
   }
   .menuMobileCategory.is-visible {
     width: 40vw;
+    overflow: scroll;
   }
 }
 
@@ -459,6 +466,7 @@ body {
   }
   .menuMobileCategory.is-visible {
     width: 60vw;
+    overflow: scroll;
   }
 }
 
@@ -474,6 +482,7 @@ body {
   }
   .menuMobileCategory.is-visible {
     width: 70vw;
+    overflow: scroll;
   }
   .article-title {
     font-size: 16px;
@@ -482,6 +491,6 @@ body {
 
 @media only screen and (max-width: 370px) {
   .menuButton-newspapersX {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
