@@ -71,27 +71,6 @@
               article.urlToImage = article.urlToImage
             }
           })
-
-          news.map(article => {
-
-            let theDate = article.publishedAt
-
-            function dateConvert() {
-              date = new Date(theDate);
-              year = date.getFullYear();
-              month = date.getMonth() + 1;
-              dt = date.getDate();
-
-              if (dt < 10) {
-                dt = '0' + dt;
-              }
-              if (month < 10) {
-                month = '0' + month;
-              }
-              return month + '/' + dt + '/' + year
-            }
-            vm.standardDate = dateConvert()
-          })
         })
       vm.news = []
     }
@@ -104,8 +83,8 @@
       vm.backToTop = false;
       let newspaper = value
 
-      if (value == 'cnn.com') {
-        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1280px-CNN.svg.png'
+      if (value == 'apnews.com') {
+        vm.newspaperHeader = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Associated_Press_logo.svg/2000px-Associated_Press_logo.svg.png'
       } else if (value == 'huffingtonpost.com') {
         vm.newspaperHeader = 'http://www.brandchannel.com/wp-content/uploads/2017/05/huffpost-new-logo-2017.jpg'
       } else if (value == 'msnbc.com') {
@@ -143,27 +122,6 @@
             } else {
               article.urlToImage = article.urlToImage
             }
-          })
-
-          news.map(article => {
-
-            let theDate = article.publishedAt
-
-            function dateConvert() {
-              date = new Date(theDate);
-              year = date.getFullYear();
-              month = date.getMonth() + 1;
-              dt = date.getDate();
-
-              if (dt < 10) {
-                dt = '0' + dt;
-              }
-              if (month < 10) {
-                month = '0' + month;
-              }
-              return month + '/' + dt + '/' + year
-            }
-            vm.standardDate = dateConvert()
           })
         })
 
